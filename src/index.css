@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fafafa;
+}
+
+ul,
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.todoapp {
+    margin: 0 auto;
+    width: 500px;
+    height: 300px;
+    margin-top: 100px;
+    position: relative;
+}
+
+.todoapp .header h1 {
+    text-align: center;
+    font-size: 60px;
+    font-weight: normal;
+    color: rgb(221, 0, 0);
+}
+
+.todoapp .header .new-todo {
+    width: 100%;
+    height: 40px;
+    outline: none;
+    border: 0;
+    background-color: #fff;
+    box-shadow: 0 0 5px #efefef;
+    text-indent: 40px;
+}
+
+.todoapp .header .new-todo::placeholder {
+    font-style: italic;
+    font-size: 18px;
+    color: #eaeaea;
+}
+
+.todoapp .main {
+    width: 100%;
+    background-color: #fff;
+}
+
+.todoapp .main .todo-list {
+    position: relative;
+    bottom: 30px;
+    margin-bottom: -30px;
+}
+
+.todoapp .main .todo-list .todo {
+    border-bottom: 1px solid #fafafa;
+}
+
+.todoapp .main .todo-list .todo:last-of-type {
+    border-bottom: none;
+}
+
+.todoapp .main .toggle-all {
+    display: none;
+}
+
+.todoapp .main>label {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: relative;
+    bottom: 40px;
+    cursor: pointer;
+    background: url("assets/unchecked.svg") no-repeat center center / 20px 20px;
+}
+
+.todoapp li .view {
+    width: 100%;
+    height: 40px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+}
+
+.todoapp li .view .toggle {
+    display: block;
+    float: left;
+    width: 40px;
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    appearance: none;
+    background: url("assets/unchecked.svg") no-repeat center center / 20px 20px;
+}
+
+
+.todoapp .completed .view .toggle {
+    background: url("assets/checked.svg") no-repeat center center / 20px 20px;
+}
+
+.todoapp li .view label {
+    display: block;
+    float: left;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.todoapp .completed .view label {
+    text-decoration: line-through;
+    color: #ececec;
+}
+
+.todoapp li .view .destroy {
+    width: 40px;
+    height: 40px;
+    appearance: none;
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+
+.todoapp li .view:hover .destroy {
+    background: url("assets/delete.svg") no-repeat center center / 20px 20px;
+}
+
+.todoapp li .edit {
+
+    display: none;
+}
+
+.todoapp li.editing {
+    position: relative;
+}
+
+.todoapp li.editing .edit {
+    position: absolute;
+    top: 0;
+    left: 20px;
+    display: block;
+    width: 80%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    outline: none;
+    border: 0;
+}
+
+.todoapp .footer {
+    width: 100%;
+    box-shadow: 0 0 5px #efefef;
+    background-color: #fff;
+    padding: 0 10px;
+    height: 30px;
+    box-sizing: border-box;
+}
+
+.todoapp .footer .todo-count,
+.todoapp .footer .filters,
+.todoapp .footer .clear-completed {
+    display: block;
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    float: left;
+    box-sizing: border-box;
+    bottom: 30px;
+    color: #aaa;
+    font-size: 14px;
+}
+
+.todoapp .footer .todo-count strong {
+    margin-right: 5px;
+    text-align: center;
+}
+
+.todoapp .footer .todo-count {
+    width: 25%;
+}
+
+.todoapp .footer .filters {
+    width: 50%;
+    padding: 0 5px;
+    float: left;
+}
+
+.todoapp .footer .filters li {
+    margin-right: 10px;
+    float: left;
+}
+
+.todoapp .footer .filters li a {
+    color: #aaa;
+    padding: 2px 5px;
+}
+.todoapp .footer .filters li .selected {
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+.todoapp .footer .clear-completed {
+    width: 25%;
+    cursor: pointer;
+    border: 0;
+    background-color: #fff;
+    appearance: none;
+    outline: none;
+}
